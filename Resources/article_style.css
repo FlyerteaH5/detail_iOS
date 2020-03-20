@@ -810,6 +810,7 @@ ul {
   background-color: #F4F5F6;
   padding: .625rem;
   border-radius: .25rem;
+  position: relative;
 }
 
 .mention-item-left {
@@ -827,6 +828,7 @@ img.mention-item-pic {
 
 .mention-item-right {
   overflow: hidden;
+  flex-grow: 1;
 }
 
 .mention-item-sub-tit {
@@ -862,8 +864,10 @@ img.mention-item-pic {
   height: 1.5rem;
   border: 1px solid #FF7800;
   border-radius: .3125rem;
-  position: relative;
-  float: right;
+
+  position: absolute;
+  bottom: 1.0625rem;
+  right: .625rem;
 }
 
 .mention-item-link span {
