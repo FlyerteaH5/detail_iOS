@@ -36,7 +36,7 @@
 
 
   <!-- 好价css -->
-<!--  <link rel="stylesheet"-->
+  <!--  <link rel="stylesheet"-->
   <link rel="stylesheet"
         href="swiper.min.css">
   <link rel="stylesheet"
@@ -96,49 +96,70 @@
       <!--正文-->
       <div class="comment-detail-main">
         <!-- 好价内容 -->
-        <div class="good-price-details" style="<!-- THREAD GOOD PRICE SHOW -->">
-            
+        <div class="good-price-details"
+             style="<!-- THREAD GOOD PRICE SHOW -->">
+
           <div class="good-price-details-header">
-            <div class="swiper-container" style="<!-- THREAD GOOD PRICE SWIPER SHOW -->">
-              <div class="swiper-pagination" style="<!-- THREAD GOOD PRICE SWIPER pagination SHOW -->"></div>
+            <div class="swiper-container"
+                 style="<!-- THREAD GOOD PRICE SWIPER SHOW -->">
+              <div class="swiper-pagination"
+                   style="<!-- THREAD GOOD PRICE SWIPER pagination SHOW -->"></div>
               <div class="swiper-wrapper">
-                  <!-- THREAD GOOD PRICE SWIPER CONTENT -->
+                <!-- THREAD GOOD PRICE SWIPER CONTENT -->
               </div>
             </div>
             <div class="gpd-info">
-              <p><!-- THREAD DATELINE --></p>
-              <p><!-- THREAD GDP-INFO PLATFORM --></p>
-              <p>爆料人：<span><!-- THREAD GDP-INFO USERNAME --></span></p>
+              <p>
+                <!-- THREAD DATELINE -->
+              </p>
+              <p>
+                <!-- THREAD GDP-INFO PLATFORM -->
+              </p>
+              <p>爆料人：<span>
+                  <!-- THREAD GDP-INFO USERNAME --></span></p>
             </div>
             <h2 class="gpd-tit">
-              <i><!-- THREAD GDP-TIT SUBFORUM --></i>
+              <i>
+                <!-- THREAD GDP-TIT SUBFORUM --></i>
               <!-- THREAD GDP-TIT SUBJECT -->
             </h2>
-            <p class="gpd-price <!-- THREAD GDP-PRICE CLASS -->"><!-- THREAD GDP-PRICE CONTENT --></p>
-            
+            <p class="gpd-price <!-- THREAD GDP-PRICE CLASS -->">
+              <!-- THREAD GDP-PRICE CONTENT -->
+            </p>
+
             <div class="gpd-btn-box">
-                <a href="" class="gpd-btn get-coupon" style="<!-- THREAD GDP-COUPONBTN SHOW -->"><!-- THREAD GDP-COUPONBTN CONTENT --></a>
-                <a href=""
-                   class="gpd-btn"><!-- THREAD GDP-BTN CONTENT --><i class="triangle"></i></a>
+              <a href=""
+                 class="gpd-btn get-coupon"
+                 style="<!-- THREAD GDP-COUPONBTN SHOW -->">
+                <!-- THREAD GDP-COUPONBTN CONTENT --></a>
+              <a href=""
+                 class="gpd-btn">
+                <!-- THREAD GDP-BTN CONTENT --><i class="triangle"></i></a>
             </div>
           </div>
 
           <div class="good-price-details-body">
             <div class="good-price-details-article">
               <!-- 文章内容 -->
-              <div class="content"><span><!-- THREAD GOODS FLYERUSER -->"<span id="author-name"><!-- THREAD GDP-INFO USERNAME --></span>"爆料:</span> <span id="price-desc"><!-- THREAD GOODS COMMENT --></span></div>
-              <div class="content" style="<!-- THREAD GOODS RECOMMEND REASON SHOW-->">
-                <span><!-- THREAD GOODS RECOMMEND REASON -->:</span>
+              <div class="content"><span>
+                  <!-- THREAD GOODS FLYERUSER -->"<span id="author-name">
+                    <!-- THREAD GDP-INFO USERNAME --></span>"爆料:</span> <span id="price-desc">
+                  <!-- THREAD GOODS COMMENT --></span></div>
+              <div class="content"
+                   style="<!-- THREAD GOODS RECOMMEND REASON SHOW-->">
+                <span>
+                  <!-- THREAD GOODS RECOMMEND REASON -->:</span>
                 <!-- THREAD GOODS RECOMMEND REASON CONTENT -->
               </div>
             </div>
-            
+
           </div>
-          
+
         </div>
         <!-- 好价end -->
 
-        <div class="comment-author" style="<!--  THREAD COMMENT-AUTHOR SHOW  -->">
+        <div class="comment-author"
+             style="<!--  THREAD COMMENT-AUTHOR SHOW  -->">
 
           <span class="author-avater">
             <img class="avater_img"
@@ -186,7 +207,7 @@
           <!--帖子详情-->
           <div class="post-content">
             <!-- THREAD CONTENT -->
-            
+
           </div>
 
           <!--投票区域-->
@@ -264,12 +285,42 @@
 
           <!-- 文中提及内容：-->
           <div class="mention"
-               style="<!-- THREAD REFER SHOW -->">
-            <p class="mention-tit">文中提及内容：</p>
-            <ul class="mention-ls">
-              <!-- THREAD REFER CONTENT -->
+               style="display: block; font-size: 18px;">
+            <p class="mention-tit"
+               style="font-size: 16.941176470588236px;">文中提及内容：</p>
+            <ul class="mention-ls"
+                style="font-size: 18px;">
+
+              <li class="mention-item"
+                  style="font-size: 18px;">
+                <div class="mention-item-left"
+                     style="font-size: 18px;">
+
+                  <img src="https://ptf.flyert.com/creditcard/image/creditcard/20180608175514861.jpg"
+                       alt=""
+                       class="mention-item-pic"
+                       style="font-size: 18px;">
+                </div>
+                <div class="mention-item-right"
+                     style="font-size: 18px;">
+                  <p class="mention-item-sub-tit"
+                     style="font-size: 16.941176470588236px;">中信易卡白金卡（精英版）</p>
+                  <div class="mention-item-desc"
+                       style="font-size: 14.823529411764707px;">
+                    <p style="font-size: 14.823529411764707px;">4.1<span
+                            style="font-size: 14.823529411764707px;">分</span></p>
+                    <p style="font-size: 14.823529411764707px;">74<span
+                            style="font-size: 14.823529411764707px;">人评价</span></p>
+                  </div>
+                  <a class="mention-item-link">
+                    <span>立即申请</span>
+                  </a>
+                </div>
+              </li>
+
             </ul>
           </div>
+
 
           <!--广告-->
           <!-- tag广告 -->
@@ -552,7 +603,7 @@
             var slides = this.slides;
             if (slides.length == 1) {
               $('.swiper-pagination').hide();
-              this.noSwiping =true;
+              this.noSwiping = true;
               $('.swiper-wrapper').addClass('swiper-no-swiping')
             }
           }
