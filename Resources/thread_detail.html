@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <title>帖子详情</title>
+  <meta name="viewport"
+        content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable"
+        content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style"
+        content="black">
+  <meta name="format-detection"
+        content="telephone=no, email=no">
+  <!-- 通用js -->
+  <script src="flexible.js"></script>
+  <script src="jquery-2.1.3.min.js"></script>
+  <script src="jquery.lazyload.min.js"></script>
+  <script src="vue.min.js"></script>
+  <script src="https://ptf.flyert.com/template/zhikai_n5app/js/layer.js"></script>
+  <!-- end -->
+  <!-- 通用css -->
+  <link rel="stylesheet"
+        type="text/css"
+        href="https://ptf.flyert.com/template/zhikai_n5app/css/iphone_update.css">
+  <!-- end -->
+  <!-- 帖子页css -->
+  <link rel="stylesheet"
+        type="text/css"
+        href="flyertea.css">
+  <link rel="stylesheet"
+        type="text/css"
+        href="article_style.css">
+  <!-- end -->
+
+
+
+  <!-- 好价css -->
+<!--  <link rel="stylesheet"-->
+  <link rel="stylesheet"
+        href="swiper.min.css">
+  <link rel="stylesheet"
+        href="good_price.css">
+  <!-- end -->
+  <script>
+    var threadpoll = '<!-- THREAD POLL LIST -->'; //投票数据
+    var nightMode = 'FK_NIGHT_MODE_TYPE'; //夜间模式
+    var detailTextSize = FK_TEXT_SIZE; //字体大小
+    var changeTextFont;
+  </script>
+
+</head>
+
+<body>
+  <div class="page">
+    <!-- 新人贴 回复威望奖励 tip -->
+    <div class="newbie_tip"
+         style="<!-- THREAD NEWUSER SHOW -->">
+      <p>
+        <!-- THREAD NEWUSER MESSAGE -->
+      </p>
+    </div>
+
+    <div class="article-img"
+         style="background-image: url(<!-- ARTICLE COVER URL -->);<!-- ARTICLE COVER SHOW -->">
+      <button class="change-cover"
+              style="<!-- ARTICLE COVER BTN SHOW -->">
+        <!-- ARTICLE COVER BTN STRING --></button>
+    </div>
+
+
+    <div class="comment-detail">
+      <div class="comment-header"
+           style="<!-- THREAD SUBJECT SHOW -->">
+        <h4>
+          <span>
+            <!-- THREAD SUBJECT --></span>
+          <img class="digest"
+               style="<!-- THREAD DIGEST SHOW -->"
+               src="digest.png">
+          <img style="<!-- THREAD GOODARTICLE SHOW -->"
+               src="goodArticle.png">
+
+          <p class="thread_goodReward"
+             style="<!-- THREAD GOOD REWARD SHOW -->">
+            <span>好文</span>
+            <span>
+              <!-- THREAD GOOD REWARD NUM --></span>
+          </p>
+          <img class="icon-fire"
+               style="<!-- THREAD HOT SHOW -->"
+               src="hot.png">
+        </h4>
+      </div>
+
+      <!--正文-->
+      <div class="comment-detail-main">
+        <!-- 好价内容 -->
+        <div class="good-price-details" style="<!-- THREAD GOOD PRICE SHOW -->">
+            
+          <div class="good-price-details-header">
+            <div class="swiper-container" style="<!-- THREAD GOOD PRICE SWIPER SHOW -->">
+              <div class="swiper-pagination" style="<!-- THREAD GOOD PRICE SWIPER pagination SHOW -->"></div>
+              <div class="swiper-wrapper">
+                  <!-- THREAD GOOD PRICE SWIPER CONTENT -->
+              </div>
+            </div>
+            <div class="gpd-info">
+              <p><!-- THREAD DATELINE --></p>
+              <p><!-- THREAD GDP-INFO PLATFORM --></p>
+              <p>爆料人：<span><!-- THREAD GDP-INFO USERNAME --></span></p>
+            </div>
+            <h2 class="gpd-tit">
+              <i><!-- THREAD GDP-TIT SUBFORUM --></i>
+              <!-- THREAD GDP-TIT SUBJECT -->
+            </h2>
+            <p class="gpd-price <!-- THREAD GDP-PRICE CLASS -->"><!-- THREAD GDP-PRICE CONTENT --></p>
+            
+            <div class="gpd-btn-box">
+                <a href="" class="gpd-btn get-coupon" style="<!-- THREAD GDP-COUPONBTN SHOW -->"><!-- THREAD GDP-COUPONBTN CONTENT --></a>
+                <a href=""
+                   class="gpd-btn"><!-- THREAD GDP-BTN CONTENT --><i class="triangle"></i></a>
+            </div>
+          </div>
+
+          <div class="good-price-details-body">
+            <div class="good-price-details-article">
+              <!-- 文章内容 -->
+              <div class="content"><span><!-- THREAD GOODS FLYERUSER -->"<span id="author-name"><!-- THREAD GDP-INFO USERNAME --></span>"爆料:</span> <span id="price-desc"><!-- THREAD GOODS COMMENT --></span></div>
+              <div class="content" style="<!-- THREAD GOODS RECOMMEND REASON SHOW-->">
+                <span><!-- THREAD GOODS RECOMMEND REASON -->:</span>
+                <!-- THREAD GOODS RECOMMEND REASON CONTENT -->
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- 好价end -->
+
+        <div class="comment-author" style="<!--  THREAD COMMENT-AUTHOR SHOW  -->">
+
+          <span class="author-avater">
+            <img class="avater_img"
+                 index="<!--  THREAD AVATAR INDEX  -->"
+                 src="<!-- THREAD USER AVATAR -->"
+                 onerror="this.onerror=null;this.src='avatar-default.pdf'">
+            <img class="gender-mark"
+                 src="god.png"
+                 style="<!-- GOD SHOW -->">
+          </span>
+
+          <div class="author-name">
+            <h4>
+              <!-- THREAD USER NAME --><img class="sm_icon"
+                   style="<!-- THREAD SM SHOW-->"
+                   src="vip.png"><img class="vip_lv"
+                   style="<!-- THREAD VIPICON SHOW-->"
+                   src="<!-- THREAD VIPICON IMG-->"></h4>
+            <p><span>
+                <!-- THREAD GROUP NAME --></span><span>
+                <!-- THREAD DATELINE --></span></p>
+            <div class="user_btn">
+              <a href="javascript:;"
+                 class="attent_btn attent"
+                 style="<!-- THREAD USERINFO ATTEN SHOW -->"><img src="icon-add.png">
+                <!-- THREAD USERINFO ATTEN TITLE --></a>
+              <a href="javascript:;"
+                 class="attent_btn unattent"
+                 style="<!-- THREAD USERINFO ATTENED SHOW -->">已
+                <!-- THREAD USERINFO ATTEN TITLE --></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!--正文内容-->
+        <div class="comment-content-special">
+
+          <!--作者名称下方的提示-->
+          <p class="tip-box"
+             style="<!-- THREAD XIAOBIANZHU SHOW -->">
+            <!-- THREAD XIAOBIANZHU CONTENT -->
+          </p>
+
+          <!--帖子详情-->
+          <div class="post-content">
+            <!-- THREAD CONTENT -->
+            
+          </div>
+
+          <!--投票区域-->
+          <div class="voteBox"
+               id="voteBox">
+            <div class="vote_head"
+                 v-cloak>
+              <p class="vote_title">
+                <span class="vote_icon"><img src="toup.png" /></span>
+                <span class="vote_tit"
+                      v-if="voteData.multiple == '0'">单选投票</span>
+                <span class="vote_tit"
+                      v-if="voteData.multiple != '0'">多选投票(最多可选{{voteData.maxchoices}}项)</span>
+              </p>
+              <p class="vote_tip">
+                <span v-if="voteData.visiblepoll =='1'">投票后结果可见,</span>
+                共有{{voteData.voterscount}}人参与投票
+              </p>
+
+              <p class="vote_state"
+                 v-if="!voteState">投票已结束</p>
+              <p class="vote_state"
+                 v-if="voteState && voteData.remaintime && voteData.remaintime !=''">
+                距离结束还有:
+                <span class="item"
+                      v-if="endtime.day>0"><span>{{endtime.day}}</span>天</span>
+                <span class="item"
+                      v-if="endtime.hour>0"><span>{{endtime.hour}}</span>小时</span>
+                <span class="item"><span>{{endtime.minute}}</span>分</span>
+              </p>
+            </div>
+            <div class="vote_content"
+                 v-cloak>
+              <ul>
+                <li v-for="(item,index) in voteData.polloptions">
+
+                  <div class="item"
+                       v-on:click="select(index)"
+                       v-if="voteData.userpolled == '0' && voteState">
+                    <span class="item_btn"
+                          v-if="voteData.userpolled == '0' && voteState"
+                          v-bind:class="{active:item.userSelect}"></span>
+                    {{index+1}}.{{item.polloption}}
+                  </div>
+                  <div class="item"
+                       v-else>
+                    {{index+1}}.{{item.polloption}}
+                  </div>
+                  <div class="item_bar"
+                       v-if="(voteData.userpolled == '1' && voteData.visiblepoll =='1' ) || voteData.visiblepoll =='0'">
+                    <span class="bar_ratio">{{item.percent}}%</span>
+                    <p class="progress_bar"
+                       v-bind:style="{ width: item.percent +'%' }">
+                      {{item.votes}}票
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="vote_btn">
+              <a href="javascript:;"
+                 class="vote-btn-disabled vote-btn"
+                 v-if="voteData.userpolled == '0' && userSelect.length<1 && voteState">提交</a>
+              <a class="vote-btn"
+                 v-if="voteData.userpolled == '0' && userSelect.length>0 && voteState"
+                 v-on:click="submitVote">提交</a>
+              <p class="vote_btn_tip"
+                 v-if="voteData.userpolled == '1' && voteState">
+                您已投票,谢谢参与</p>
+              <p class="vote_btn_tip"
+                 v-if="!voteState">投票已结束</p>
+
+            </div>
+          </div>
+
+          <!-- 文中提及内容：-->
+          <div class="mention"
+               style="<!-- THREAD REFER SHOW -->">
+            <p class="mention-tit">文中提及内容：</p>
+            <ul class="mention-ls">
+              <!-- THREAD REFER CONTENT -->
+            </ul>
+          </div>
+
+          <!--广告-->
+          <!-- tag广告 -->
+          <div id="content-tagadv"
+               class="content-ad"
+               style="<!-- ARTICLE TAGADV SHOW -->;">
+            <!-- THREAD MESSAGE TAGAD -->
+          </div>
+          <!-- 其他广告 -->
+          <div id="content-detailadv"
+               class="content-ad">
+            <!-- THREAD MESSAGE AD -->
+            <div class="videoadv"
+                 style="<!-- VIDEO AD SHOW -->;">
+              <div id="videoadv-mask"></div>
+              <div id="video_time"
+                   class="video_time"></div>
+              <img id="advert-img"
+                   src="advert.png"></p>
+              <img src="https://ptf.flyert.com/player_black.png"
+                   class="videoadv-img" />
+
+              <div class="video-box">
+                <video id="videoadv-player"
+                       poster="<!-- VIDEO AD IMAGE -->"
+                       loop="true"
+                       webkit-playsinline
+                       playsinline
+                       x5-playsinline
+                       x5-video-orientation="portraint"
+                       x5-video-player-type="h5"
+                       muted="true"
+                       src="<!-- VIDEO AD SOURCE -->">
+                </video>
+              </div>
+
+              <div class="videoadv-title clearfix"
+                   style="<!-- VIDEO AD TITLE SHOW -->">
+                <div class="videoadv-title_left">
+                  <!-- VIDEO AD TITLE -->
+                </div>
+                <div class="videoadv-title_right"><a>
+                    <!-- VIDEO AD BUTTON --></a></div>
+              </div>
+            </div>
+
+            <div class="pingyouadv"
+                 style="height:<!-- PINGYOU AD HEIGHT -->px;width:100%;margin-top:0.5rem;margin-botom:0.25rem;background:#f2f2f2;position:relative;<!-- PINGYOU AD SHOW -->;">
+              <div>
+                <!-- ARTICLE PINGYOU AD -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="at-info-list"
+             style="<!-- THREAD AT SHOW -->">
+          <!-- THREAD AT Title -->
+        </div>
+
+        <p style="<!-- THREAD LOCATION SHOW -->"
+           class="locate"><img src="dingwei.png"><!-- THREAD LOCATION -->
+        </p>
+
+        <!-- 帖子结尾用户信息 -->
+        <div class="userInfo"
+             style="<!-- THREAD USERINFO SHOW -->">
+          <!-- 用户信息 -->
+          <div class="userBox"
+               style="<!-- THREAD USERBOX SHOW -->">
+            <p class="title">
+              <!-- THREAD USERINFO TITLE -->
+            </p>
+            <div class="user_head clearfix">
+              <p class="user_img">
+                <img class="avater_img"
+                     index="<!--  THREAD AVATAR INDEX  -->"
+                     src="<!-- THREAD USERINFO AVATAR -->"
+                     onerror="this.onerror=null;this.src='avatar-default.pdf'">
+                <img src="<!-- THREAD USER GENDER -->"
+                     class="user_icon_mark"
+                     style="<!-- GENDER SHOW -->">
+              </p>
+              <div class="user_msg">
+                <p class="user_name">
+                  <!-- THREAD USERINFO USERNAME -->
+                  <span class="user_grade">
+                    <img src="<!-- THREAD USERINFO GRADE -->">
+                    <img style="height:1.2rem;"
+                         src="<!-- THREAD USERINFO VIP -->">
+                  </span>
+                </p>
+                <ul class="clearfix">
+                  <li><span>
+                      <!-- THREAD USERINFO THREADS --></span></li>
+                  <li><span>
+                      <!-- THREAD USERINFO FLOWERS --></span></li>
+                  <li><span>
+                      <!-- THREAD USERINFO FANS --></span></li>
+                </ul>
+              </div>
+              <div class="user_btn">
+                <a href="javascript:;"
+                   id="user_atten_info"
+                   class="attent_btn attent"
+                   style="<!-- THREAD USERINFO ATTEN SHOW -->">+
+                  <!-- THREAD USERINFO ATTEN TITLE --></a>
+                <a href="javascript:;"
+                   class="attent_btn unattent"
+                   style="<!-- THREAD USERINFO ATTENED SHOW -->">已
+                  <!-- THREAD USERINFO ATTEN TITLE --></a>
+              </div>
+            </div>
+            <div class="user_more"
+                 style="<!-- THREAD TAMORETHREAD SHOW -->">
+              <p class="more_title"
+                 style="<!-- THREAD MORE HAOWEN SHOW -->">
+                <!-- THREAD TAMORETHREAD TITLE -->
+              </p>
+              <ul class="more_list">
+                <!-- THREAD MORE HAOWEN LIST -->
+              </ul>
+            </div>
+          </div>
+          <!-- 打赏 -->
+          <div class="reward">
+            <p class="reward_title">
+              <!-- THREAD REWARD TITLE -->
+            </p>
+            <div class="reward_btn">
+              <a href="javascript:;"
+                 class="btn_share">
+                <!-- THREAD SHARE TEXT --></a>
+              <a href="javascript:;"
+                 class="btn_reward"
+                 style="<!-- THREAD REWARD SHOW -->">
+                <!-- THREAD REWARD TEXT --></a>
+              <a href="javascript:;"
+                 class="btn_flower">
+                <!-- THREAD FLOWER TEXT --></a>
+            </div>
+            <p class="num_box"
+               style="<!-- THREAD REWARD RECORD SHOW -->"><span class="reward_num">
+                <!-- THREAD REWARD RECORD TITLE --></span></p>
+          </div>
+        </div>
+
+        <div class="topic_bg"
+             style="<!-- THREAD TOPIC SHOW -->">
+          <div class="topic"
+               id="topic">
+            <p class="topic_from"><span>
+                <!-- THREAD TOPIC FROM NAME --></span></p>
+            <div class="topic_name">
+              <h4>
+                <!-- THREAD TOPIC NAME -->
+              </h4>
+              <img src="right.png">
+            </div>
+            <p class="topic_view"><span>
+                <!-- THREAD TOPIC VIEWS --></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="best_answer_id"
+           class="best_answer"
+           style="<!-- BEST ANSWER PROMPT -->">
+        <span>
+          <!-- BEST ANSWER TITLE --></span>
+      </div>
+
+      <div id="good-commnet-list"
+           style="<!-- THREAD GOOD REPLY SHOW -->"
+           class="comment-reply">
+
+        <div id="good-reply-header"
+             class="reply-header">
+
+          <div class="reply_header_bottom">
+            <span id="good_reply_number"
+                  class="article-current">
+              <!-- THREAD GOOD REPLY COUNT --></span>
+          </div>
+
+        </div>
+
+        <!-- THREAD GOOD COMMENT LIST -->
+      </div>
+
+      <div id="commnet-list"
+           style="<!-- THREAD REPLY SHOW -->"
+           class="comment-reply">
+
+        <div id="reply-header"
+             class="reply-header">
+
+          <div class="reply_header_bottom">
+            <span class="<!-- THREAD REPLY NUM CLASS -->"
+                  id="reply_number">
+              <!-- THREAD REPLY COUNT --></span>
+
+            <span class="lz_change"
+                  id="lz_change"
+                  style="<!-- THREAD REPLY LZ SHOW -->">
+              <!-- THREAD REPLY LZ TITLE -->
+            </span>
+
+            <span class="commnet-sort"
+                  id="reply_sort">
+              <span id="reply_asc"
+                    class="sort-asc">正序</span>
+              /
+              <span id="reply_desc"
+                    class="sort-desc">倒序</span>
+            </span>
+          </div>
+
+        </div>
+        <!-- ARTICLE COMMENT LIST -->
+      </div>
+
+      <div id="comment-none-empty"
+           class="comment-none"
+           style="display:none;">
+        <img src="empty_reply.png">
+        <p>
+          <!-- THREAD REPLY LZ EMPTY -->
+        </p>
+      </div>
+
+      <!--评论底部广告-->
+      <div class="comment_bottom_ad_place">
+        <div id="comment_bottom_adv"
+             class="comment-ad"
+             style="<!-- THREAD COMMENTBOTTOMADV SHOW -->">
+          <!-- THREAD COMMENTBOTTOMADV CONTENT -->
+        </div>
+      </div>
+
+
+      <!-- 相关推荐 -->
+      <div class="recommend"
+           style="<!-- THREAD RECOMMAND SHOW -->">
+        <div class="recommend-title">
+          <!-- THREAD RECOMMAND TITLE -->
+        </div>
+        <!-- THREAD RECOMMAND CONTENT -->
+      </div>
+    </div>
+
+    <div class="ad-img"
+         style="<!-- THREAD AD SHOW -->"
+         id="v-advertisement">
+      <!-- ARTICLE AdVERTISEMENT LIST -->
+    </div>
+
+  </div>
+
+  <!-- 帖子页js -->
+  <script src="vote.js"></script>
+  <script src="detail.js"></script>
+  <script src="thread.js"></script>
+  <script src="night.js"></script>
+  <script src="resize.js"></script>
+  <!-- end -->
+  <!-- 好价js -->
+  <script src="swiper.min.js"></script>
+  <script>
+    $(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        observer: true,
+        observeParents: true,
+        on: {
+          init: function () {
+            var slides = this.slides;
+            if (slides.length == 1) {
+              $('.swiper-pagination').hide();
+              this.noSwiping =true;
+              $('.swiper-wrapper').addClass('swiper-no-swiping')
+            }
+          }
+        }
+      });
+    });
+  </script>
+  <!-- end -->
+  <!-- 通用js -->
+  <script src="https://ptf.flyert.com/template/zhikai_n5app/js/iphone_update.js"
+          charset="UTF-8"></script>
+</body>
+
+</html>

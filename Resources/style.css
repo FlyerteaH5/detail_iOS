@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "STHeitiSC-Light";
+    font: "STHeitiSC-Light";
+}
+
+body {
+    background: #f6f6f6;
+    padding: 5px 0;
+    margin: 0;
+}
+
+font {
+    color: #4b4c4c !important;
+    background-color: transparent !important;
+}
+
+img {
+    vertical-align: text-top;
+}
+
+a {
+    color: #25a3d7;
+}
+
+div#v-titleblock {
+    padding: 0 10px;
+}
+
+div#v-titleblock .avatar {
+    width: 30px;
+    height: 30px !important;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+div#v-titleblock #title {
+    color: #4e5053;
+    font-size: 18px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+div.title_separator {
+    background: url("content_seperator.png") repeat-x left center;
+    height: 21px;
+    clear: both;
+}
+
+div.title_separator span {
+    font-size: 9px;
+    color: #9b9b9b;
+    background: #f6f6f6;
+}
+
+div#v-main {
+    padding: 10px 15px 8px 15px;
+    font-size: 16px;
+    line-height: 19px;
+    content: #4a4a4a;
+    word-wrap: break-word;
+    text-align: justify;
+}
+/*
+div#v-main a {
+    color: #4a4a4a;
+}*/
+
+div#v-main img {
+    width: 100% !important;
+    background: url('image_default.png') center center no-repeat #ededed;
+    background-size: 60px 60px;
+
+}
+
+div#v-main img.smiley {
+    width: 18px !important;
+}
+
+div#v-main .pstatus {
+    font-size: 10px;
+    font-style: italic;
+    color: #9b9b9b;
+}
+
+div#v-main table {
+    width: 100% !important;
+    border-collapse: collapse;
+    border: none;
+}
+
+div#v-main table td {
+    border: solid #bbbbbb 1px;
+}
+
+li span {
+    display: inline-block;
+    padding-top: 6px;
+}
+
+li span.username {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+li span.datetime {
+    font-size: 10px;
+    color: #bfbfbf;
+    padding-left: 10px;
+}
+
+li .message {
+    color: #4a4a4a;
+    line-height: 1.2;
+    padding-top: 10px;
+}
+
+div#v-review {}
+
+div#v-review li {
+    padding: 10px 0 0 54px;
+}
+
+div#v-review li .message {
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.separator {
+    background: url("content_seperator.png") repeat-x left bottom;
+    height: 0.07em;
+}
+
+div#v-comment {
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+div#v-advertisement {
+    margin: 10px;
+    -webkit-user-select: none;
+}
+
+
+div#v-comment ul#comment-list {
+    display: block;
+    list-style: none;
+}
+
+div#v-comment li.comment-li {
+    list-style: none;
+    clear: both;
+    overflow: hidden;
+    /*background: url("content_seperator.png") repeat-x left bottom;*/
+}
+
+div#v-comment li.comment-li .wrap {
+    padding: 10px;
+}
+
+div#v-comment li table {
+	width: 100%;
+}
+
+div#v-comment li table tr td {
+    vertical-align: top;
+}
+
+div#v-comment li table tr td.messagetd {
+    padding-left: 10px;
+}
+
+div#v-comment li .avatar {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 15px;
+    display: block;
+}
+
+div#v-comment li .quote {
+    font-size: 14px;
+    line-height: 1.2;
+    border-left: 2px solid #eeeeee;
+    padding-left: 4px;
+    color: #bfbfbf;
+    margin-top: 10px;
+}
+
+div#v-comment li .message {
+    font-size: 16px;
+}
+
+div#v-comment li .floor {
+    text-align: center;
+    color: #c4c4c4;
+    float: right;
+}
+
+div#v-comment li .floor span {
+    background: #efefef;
+    display: inline-block;
+    font-size: 11px;
+    height: 18px;
+    padding: 0;
+    line-height: 20px;
+}
+
+div#v-comment li img {
+    width: 100% !important;
+}
+
+div#v-comment li img.smiley {
+    width: 18px !important;
+}
+
+div#v-comment li .flower {
+    background: url("flower_bt_22*22.pdf") no-repeat left center #f6f6f6;
+    background-size: 12px 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 12px;
+    float: right;
+    color: #F55050;
+    font-size: 10px;
+    margin-top: -15px;
+}
+
+div#v-comment li .review {
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+div#v-comment li .review ul li {
+    list-style: none;;
+}
+
+div#v-comment li.comment-li .separator{
+    background: url("content_seperator.png") repeat-x left bottom;
+    height: 0.07em;
+}
+
+#flowerblock {
+    overflow: hidden;
+}
+
+#flowerblock #sendFLower {
+    float: right;
+    background: url("flower_bt_22*22.pdf") no-repeat 4px center #f6f6f6;
+    height: 22px;
+    padding-left: 28px;
+    color: #F55050;
+    line-height: 24px;
+    font-size: 9px;
+    margin-bottom: 4px;
+}
+
+#flowerblock .separator {
+    clear: both;
+}
+
+.clearboth {
+    clear: both;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+    li .separator {
+        height: 0.07em;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    li .separator {
+        height: 0.03em;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    li .separator {
+        height: 0.02em;
+    }
+}

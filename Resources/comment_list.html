@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title>帖子列表</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="jquery.lazyload.min.js"></script>
+    <script src="night.js"></script>
+    <script type="text/javascript" src="flexible.js"></script>
+    <script src="resize.js"></script>
+    <link rel="stylesheet" type="text/css" href="flyertea.css">
+    <script>
+        var nightMode = 'FK_NIGHT_MODE_TYPE';//夜间模式
+    </script>
+</head>
+
+<body>
+
+    <div class="page">
+        <div id="good-commnet-list" class="comment-reply" style="margin-top:0;<!-- THREAD GOOD REPLY SHOW -->" >
+
+            <div id="good-reply-header" class="reply-header">
+                <div class="reply_header_bottom">
+                    <span id="good_reply_number" class="article-current">
+                        <!-- THREAD GOOD REPLY COUNT --></span>
+                </div>
+            </div>
+
+            <!-- THREAD GOOD COMMENT LIST -->
+        </div>
+
+        <div id="commnet-list" class="comment-reply" style="<!-- THREAD REPLY SHOW -->">
+            <div id="reply-header" class="reply-header" style="<!-- THREAD REPLY HEAD SHOW -->">
+                <div class="reply_header_bottom">
+                    <span id="reply_number" class="article-current">
+                        <!-- THREAD REPLY COUNT --></span>
+                </div>
+            </div>
+            <!-- THREAD COMMENT LIST -->
+        </div>
+
+        <div id="comment-none-empty" class="comment-none" style="display:none;">
+            <img src="empty_reply.png">
+            <p>楼主暂时没有评论</p>
+        </div>
+
+        <!--评论底部广告-->
+        <div class="comment_bottom_ad_place">
+            <div id="comment_bottom_adv" class="comment-ad" style="<!-- THREAD COMMENTBOTTOMADV SHOW -->">
+                <!-- THREAD COMMENTBOTTOMADV CONTENT -->
+            </div>
+        </div>
+        
+        <!-- 相关推荐 -->
+        <div class="recommend" style="<!-- THREAD RECOMMAND SHOW -->">
+            <div class="recommend-title">也许你还会喜欢</div>
+            <!-- THREAD RECOMMAND CONTENT -->
+        </div>
+    </div>
+
+    <script type="text/JavaScript" src="detail.js"></script>
+    <script type="text/JavaScript" src="commnet.js"></script>
+
+</body>
+
+</html>

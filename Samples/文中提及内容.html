@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh" data-env="mobile" data-dpr="1" style="font-size: 16px; -webkit-touch-callout: none;"><head>
+  <meta charset="utf-8">
+  <title>帖子详情</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <!-- 通用js -->
+  <script src="https://hm.baidu.com/hm.js?7601573a2dec0ca7056e3cd550c86999"></script><script src="flexible.js"></script>
+  <script src="jquery-2.1.3.min.js"></script>
+  <script src="jquery.lazyload.min.js"></script>
+  <script src="vue.min.js"></script>
+  <script src="https://ptf.flyert.com/template/zhikai_n5app/js/layer.js"></script><link href="https://ptf.flyert.com/template/zhikai_n5app/js/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+  <!-- end -->
+  <!-- 通用css -->
+  <link rel="stylesheet" type="text/css" href="https://ptf.flyert.com/template/zhikai_n5app/css/iphone_update.css">
+  <!-- end -->
+  <!-- 帖子页css -->
+  <link rel="stylesheet" type="text/css" href="flyertea.css">
+  <link rel="stylesheet" type="text/css" href="article_style.css">
+  <!-- end -->
+
+
+
+  <!-- 好价css -->
+<!--  <link rel="stylesheet"-->
+  <link rel="stylesheet" href="swiper.min.css">
+  <link rel="stylesheet" href="good_price.css">
+  <!-- end -->
+  <script>
+    var threadpoll = 'null'; //投票数据
+    var nightMode = '0'; //夜间模式
+    var detailTextSize = 18; //字体大小
+    var changeTextFont;
+  </script>
+
+</head>
+
+<body class="body_sun">
+  <div class="page">
+    <!-- 新人贴 回复威望奖励 tip -->
+    <div class="newbie_tip" style="display:none;">
+      <p>
+        <!-- THREAD NEWUSER MESSAGE -->
+      </p>
+    </div>
+
+    <div class="article-img" style="background-image: url(<!-- ARTICLE COVER URL -->);display:none;">
+      <button class="change-cover" style="<!-- ARTICLE COVER BTN SHOW -->">
+        <!-- ARTICLE COVER BTN STRING --></button>
+    </div>
+
+
+    <div class="comment-detail">
+      <div class="comment-header content-sun" style="display:block;">
+        <h4>
+          <span>
+            想销易卡白，里边的基金能直接移到储蓄卡吗</span>
+          <img class="digest" style="display:none;" src="digest.png">
+          <img style="display:none;" src="goodArticle.png">
+
+          <p class="thread_goodReward" style="display:none;">
+            <span>好文</span>
+            <span>
+              <!-- THREAD GOOD REWARD NUM --></span>
+          </p>
+          <img class="icon-fire" style="display:none;" src="hot.png">
+        </h4>
+      </div>
+
+      <!--正文-->
+      <div class="comment-detail-main content-sun">
+        <!-- 好价内容 -->
+        <div class="good-price-details" style="display:none;">
+            
+          <div class="good-price-details-header">
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-ios" style="<!-- THREAD GOOD PRICE SWIPER SHOW -->">
+              <div class="swiper-pagination swiper-pagination-bullets" style="<!-- THREAD GOOD PRICE SWIPER pagination SHOW -->"></div>
+              <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                  <!-- THREAD GOOD PRICE SWIPER CONTENT -->
+              </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            <div class="gpd-info">
+              <p>02-09</p>
+              <p><!-- THREAD GDP-INFO PLATFORM --></p>
+              <p>爆料人：<span><!-- THREAD GDP-INFO USERNAME --></span></p>
+            </div>
+            <h2 class="gpd-tit">
+              <i><!-- THREAD GDP-TIT SUBFORUM --></i>
+              <!-- THREAD GDP-TIT SUBJECT -->
+            </h2>
+            <p class="gpd-price <!-- THREAD GDP-PRICE CLASS -->"><!-- THREAD GDP-PRICE CONTENT --></p>
+            
+            <div class="gpd-btn-box">
+                <a href="" class="gpd-btn get-coupon" style="<!-- THREAD GDP-COUPONBTN SHOW -->"><!-- THREAD GDP-COUPONBTN CONTENT --></a>
+                <a href="" class="gpd-btn"><!-- THREAD GDP-BTN CONTENT --><i class="triangle"></i></a>
+            </div>
+          </div>
+
+          <div class="good-price-details-body">
+            <div class="good-price-details-article">
+              <!-- 文章内容 -->
+              <div class="content"><span><!-- THREAD GOODS FLYERUSER -->"<span id="author-name"><!-- THREAD GDP-INFO USERNAME --></span>"爆料:</span> <span id="price-desc"><!-- THREAD GOODS COMMENT --></span></div>
+              <div class="content" style="display:none;">
+                <span><!-- THREAD GOODS RECOMMEND REASON -->:</span>
+                <!-- THREAD GOODS RECOMMEND REASON CONTENT -->
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <!-- 好价end -->
+
+        <div class="comment-author" style="<!--  THREAD COMMENT-AUTHOR SHOW  -->">
+
+          <span class="author-avater">
+            <img class="avater_img" index="-1" src="http://ptf.flyert.com/avatar/000/32/75/47_avatar_small.jpg" onerror="this.onerror=null;this.src='avatar-default.pdf'">
+            <img class="gender-mark" src="god.png" style="display:none;">
+          </span>
+
+          <div class="author-name">
+            <h4>
+              烈哥<img class="sm_icon" style="<!-- THREAD SM SHOW-->" src="vip.png"><img class="vip_lv" style="display:none;" src="&lt;!-- THREAD VIPICON IMG--&gt;"></h4>
+            <p><span>
+                白金会员</span><span>
+                02-09</span></p>
+            <div class="user_btn">
+              <a href="javascript:;" class="attent_btn attent" style="display: flex; color: rgb(0, 98, 230); border-color: rgb(0, 98, 230);"><img src="icon-add.png">
+                关注</a>
+              <a href="javascript:;" class="attent_btn unattent" style="display: none; background-color: rgb(244, 245, 246); color: rgb(149, 159, 169); background-position: initial initial; background-repeat: initial initial;">已
+                关注</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!--正文内容-->
+        <div class="comment-content-special">
+
+          <!--作者名称下方的提示-->
+          <p class="tip-box" style="display: none; font-size: 13.764705882352942px;">
+            <!-- THREAD XIAOBIANZHU CONTENT -->
+          </p>
+
+          <!--帖子详情-->
+          <div class="post-content" style="font-size: 18px;">
+            如题
+            
+          </div>
+
+          <!--投票区域-->
+          <div id="voteBox" class="voteBox" style="display: none; font-size: 18px;"><div class="vote_head" style="font-size: 16.941176470588236px;"><p class="vote_title" style="font-size: 16.941176470588236px;"><span class="vote_icon" style="font-size: 16.941176470588236px;"><img src="toup.png" style="font-size: 16.941176470588236px;"></span> <!----> <span class="vote_tit" style="font-size: 16.941176470588236px;">多选投票(最多可选项)</span></p> <p class="vote_tip" style="font-size: 16.941176470588236px;"><!---->
+                共有人参与投票
+              </p> <!----> <!----></div> <div class="vote_content" style="font-size: 18px;"><ul style="font-size: 18px;"></ul></div> <div class="vote_btn" style="font-size: 18px;"><!----> <!----> <!----> <!----></div></div>
+
+          <!-- 文中提及内容：-->
+          <div class="mention" style="display: block; font-size: 18px;">
+            <p class="mention-tit" style="font-size: 16.941176470588236px;">文中提及内容：</p>
+            <ul class="mention-ls" style="font-size: 18px;">
+              
+<li class="mention-item" style="font-size: 18px;">
+  <div class="mention-item-left" style="font-size: 18px;">
+
+    <img src="https://ptf.flyert.com/creditcard/image/creditcard/20180608175514861.jpg" alt="" class="mention-item-pic" style="font-size: 18px;">
+  </div>
+  <div class="mention-item-right" style="font-size: 18px;">
+    <p class="mention-item-sub-tit" style="font-size: 16.941176470588236px;">中信易卡白金卡（精英版）</p>
+    <div class="mention-item-desc" style="font-size: 14.823529411764707px;">
+      <p style="font-size: 14.823529411764707px;">4.1<span style="font-size: 14.823529411764707px;">分</span></p>
+      <p style="font-size: 14.823529411764707px;">74<span style="font-size: 14.823529411764707px;">人评价</span></p>
+    </div>
+  </div>
+</li>
+
+            </ul>
+          </div>
+
+          <!--广告-->
+          <!-- tag广告 -->
+          <div id="content-tagadv" class="content-ad" style="display: none; font-size: 18px;">
+            <!-- THREAD MESSAGE TAGAD -->
+          </div>
+          <!-- 其他广告 -->
+          <div id="content-detailadv" class="content-ad" style="font-size: 18px;">
+            <div style="font-size: 18px;"><a data-track="threadapp_图片广告" data-title="花旗银行CPC（花旗贴内）南航" href="http://www.flyertea.com/ac-3656" target="_blank" style="font-size: 18px;"><img nodata-echo="yes" src="http://ptf.flyert.com/common/cf/120037ab68g4jzt65gcozz.jpg" border="0" style="width: 100%; height: auto; margin-top: 20px; font-size: 18px;"></a><img nodata-echo="yes" style="float: none; display: none; height: 1px; width: 1px; font-size: 18px;" src="https://mon.flyertea.com/al-3656"><a class="ad_hover_href" style="font-size: 18px;"></a></div>
+            <div class="videoadv" style="display: none; font-size: 18px;">
+              <div id="videoadv-mask" style="font-size: 18px;"></div>
+              <div id="video_time" class="video_time" style="font-size: 14.823529411764707px;"></div>
+              <img id="advert-img" src="advert.png" style="font-size: 18px;"><p style="font-size: 18px;"></p>
+              <img src="https://ptf.flyert.com/player_black.png" class="videoadv-img" style="font-size: 18px;">
+
+              <div class="video-box" style="font-size: 18px;">
+                <video id="videoadv-player" poster="&lt;!-- VIDEO AD IMAGE --&gt;" loop="true" webkit-playsinline="" playsinline="" x5-playsinline="" x5-video-orientation="portraint" x5-video-player-type="h5" muted="true" src="&lt;!-- VIDEO AD SOURCE --&gt;" style="font-size: 18px;">
+                </video>
+              </div>
+
+              <div class="videoadv-title clearfix" style="font-size: 13.55294137842515px;">
+                <div class="videoadv-title_left" style="font-size: 15.24705841962029px;">
+                  <!-- VIDEO AD TITLE -->
+                </div>
+                <div class="videoadv-title_right" style="font-size: 13.55294137842515px;"><a style="font-size: 13.55294137842515px;">
+                    <!-- VIDEO AD BUTTON --></a></div>
+              </div>
+            </div>
+
+            <div class="pingyouadv" style="width: 100%; margin-top: 0.5rem; background-color: rgb(242, 242, 242); position: relative; display: none; font-size: 18px; background-position: initial initial; background-repeat: initial initial;">
+              <div style="font-size: 18px;">
+                <!-- ARTICLE PINGYOU AD -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="at-info-list" style="display:none;">
+          <!-- THREAD AT Title -->
+        </div>
+
+        <p style="display:none;" class="locate"><img src="dingwei.png"><!-- THREAD LOCATION -->
+        </p>
+
+        <!-- 帖子结尾用户信息 -->
+        <div class="userInfo" style="display:block;">
+          <!-- 用户信息 -->
+          <div class="userBox" style="display: none; border-color: rgb(236, 236, 236);">
+            <p class="title" style="border-color: rgb(236, 236, 236);">
+              <!-- THREAD USERINFO TITLE -->
+            </p>
+            <div class="user_head clearfix">
+              <p class="user_img">
+                <img class="avater_img" index="-1" src="avatar-default.pdf" onerror="this.onerror=null;this.src='avatar-default.pdf'">
+                <img src="&lt;!-- THREAD USER GENDER --&gt;" class="user_icon_mark" style="<!-- GENDER SHOW -->">
+              </p>
+              <div class="user_msg">
+                <p class="user_name">
+                  <!-- THREAD USERINFO USERNAME -->
+                  <span class="user_grade">
+                    <img src="&lt;!-- THREAD USERINFO GRADE --&gt;">
+                    <img style="height:1.2rem;" src="&lt;!-- THREAD USERINFO VIP --&gt;">
+                  </span>
+                </p>
+                <ul class="clearfix">
+                  <li><span>
+                      <!-- THREAD USERINFO THREADS --></span></li>
+                  <li><span>
+                      <!-- THREAD USERINFO FLOWERS --></span></li>
+                  <li><span>
+                      <!-- THREAD USERINFO FANS --></span></li>
+                </ul>
+              </div>
+              <div class="user_btn">
+                <a href="javascript:;" id="user_atten_info" class="attent_btn attent" style="display: flex; color: rgb(0, 98, 230); border-color: rgb(0, 98, 230);">+
+                  关注</a>
+                <a href="javascript:;" class="attent_btn unattent" style="display: none; background-color: rgb(244, 245, 246); color: rgb(149, 159, 169); background-position: initial initial; background-repeat: initial initial;">已
+                  关注</a>
+              </div>
+            </div>
+            <div class="user_more" style="<!-- THREAD TAMORETHREAD SHOW -->">
+              <p class="more_title" style="<!-- THREAD MORE HAOWEN SHOW -->">
+                <!-- THREAD TAMORETHREAD TITLE -->
+              </p>
+              <ul class="more_list">
+                <!-- THREAD MORE HAOWEN LIST -->
+              </ul>
+            </div>
+          </div>
+          <!-- 打赏 -->
+          <div class="reward">
+            <p class="reward_title">
+              作者写的很辛苦，鼓励一下吧！
+            </p>
+            <div class="reward_btn">
+              <a href="javascript:;" class="btn_share">
+                分享  3</a>
+              <a href="javascript:;" class="btn_reward" style="display:inline-flex;">
+                打赏</a>
+              <a href="javascript:;" class="btn_flower">
+                送花  1</a>
+            </div>
+            <p class="num_box" style="display:block;"><span class="reward_num">
+                打赏评分记录</span></p>
+          </div>
+        </div>
+
+        <div class="topic_bg" style="display:none;">
+          <div class="topic" id="topic">
+            <p class="topic_from"><span>
+                <!-- THREAD TOPIC FROM NAME --></span></p>
+            <div class="topic_name">
+              <h4>
+                <!-- THREAD TOPIC NAME -->
+              </h4>
+              <img src="right.png">
+            </div>
+            <p class="topic_view"><span>
+                <!-- THREAD TOPIC VIEWS --></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="best_answer_id" class="best_answer" style="display:none;">
+        <span>
+          <!-- BEST ANSWER TITLE --></span>
+      </div>
+
+      <div id="good-commnet-list" style="display:none;" class="comment-reply content-sun">
+
+        <div id="good-reply-header" class="reply-header">
+
+          <div class="reply_header_bottom">
+            <span id="good_reply_number" class="article-current">
+              <!-- THREAD GOOD REPLY COUNT --></span>
+          </div>
+
+        </div>
+
+        <!-- THREAD GOOD COMMENT LIST -->
+      </div>
+
+      <div id="commnet-list" style="display:block;margin-top:0;" class="comment-reply content-sun">
+
+        <div id="reply-header" class="reply-header">
+
+          <div class="reply_header_bottom">
+            <span class="current" id="reply_number">
+              全部评论&nbsp;<i>3</i></span>
+
+            <span class="lz_change" id="lz_change" style="border-color: rgb(5, 16, 57);">
+              只看楼主
+            </span>
+
+            <span class="commnet-sort" id="reply_sort">
+              <span id="reply_asc" class="sort-asc">正序</span>
+              /
+              <span id="reply_desc" class="sort-desc">倒序</span>
+            </span>
+          </div>
+
+        </div>
+        <div class="comment-item" id="0">
+
+    <div class="comment-author">
+
+        <span class="author-avater">
+            <img class="avater_img" src="avatar-default.pdf" index="0" onerror="this.onerror=null;this.src='avatar-default.pdf'">
+                <img class="gender-mark" src="god.png" style="display:none;">
+        </span>
+        <div class="author-name">
+            <h4>
+                一起去旅行好吗
+
+                <img class="sm_icon" style="display:none;" src="vip.png">
+                <img class="vip_lv" style="display:none;" src="&lt;!-- COMMENT VIPICON IMG--&gt;">
+
+                <span style="display: none; color: rgb(0, 98, 230); border: 0.03125rem solid rgb(0, 98, 230);">楼主</span>
+
+            </h4>
+            <p><span>
+                    银卡会员</span><span>
+                    02-09</span></p>
+        </div>
+
+        <div class="fr">
+
+            <div class="sendFLower" style="<!--  SHOW FLOWER IMAGE  -->" index="0">
+
+                <img id="flowerImage0" src="flower.png">
+                <span class="flower_num" id="flowerImageCount0" style="color: rgb(149, 159, 169);">
+                     </span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="comment-content">
+
+        <img id="showBest0" class="comment-answer-img" style="display:none;" src="bestAnswer.png">
+
+
+
+        <div style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;" class="reply-phrase-bg">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  --></span><!-- COMMENT TO MESSAGE  --></span>
+        </div>
+
+        <div class="reply-phrase-bg" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  -->
+                </span>
+                <span class="reply-author comment_block">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+
+        <div class="reply-message" style="<!-- REPLY MESSAGE SHOW -->">
+            肯定可以，不过这卡销卡据说要去柜台
+        </div>
+
+        <div class="reply-phrase-bg textCenterClass" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+    </div>
+
+</div>
+<div class="comment-item" id="1">
+
+    <div class="comment-author">
+
+        <span class="author-avater">
+            <img class="avater_img" src="http://ptf.flyert.com/avatar/000/32/76/55_avatar_small.jpg" index="1" onerror="this.onerror=null;this.src='avatar-default.pdf'">
+                <img class="gender-mark" src="god.png" style="display:none;">
+        </span>
+        <div class="author-name">
+            <h4>
+                老金
+
+                <img class="sm_icon" style="<!-- COMMENT SM SHOW-->" src="vip.png">
+                <img class="vip_lv" style="display:none;" src="&lt;!-- COMMENT VIPICON IMG--&gt;">
+
+                <span style="display: none; color: rgb(0, 98, 230); border: 0.03125rem solid rgb(0, 98, 230);">楼主</span>
+
+            </h4>
+            <p><span>
+                    钻石会员</span><span>
+                    02-09</span></p>
+        </div>
+
+        <div class="fr">
+
+            <div class="sendFLower" style="<!--  SHOW FLOWER IMAGE  -->" index="1">
+
+                <img id="flowerImage1" src="flower.png">
+                <span class="flower_num" id="flowerImageCount1" style="color: rgb(149, 159, 169);">
+                     </span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="comment-content">
+
+        <img id="showBest1" class="comment-answer-img" style="display:none;" src="bestAnswer.png">
+
+
+
+        <div style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;" class="reply-phrase-bg">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  --></span><!-- COMMENT TO MESSAGE  --></span>
+        </div>
+
+        <div class="reply-phrase-bg" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  -->
+                </span>
+                <span class="reply-author comment_block">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+
+        <div class="reply-message" style="<!-- REPLY MESSAGE SHOW -->">
+            如果<a href="https://www.flyertea.com/plugin.php?id=creditcard&amp;mod=view&amp;sid=1812" target="_blank" class="relatedlink">易卡</a>储蓄卡账户开通了薪金宝，需要提前解约。
+        </div>
+
+        <div class="reply-phrase-bg textCenterClass" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+    </div>
+
+</div>
+<div class="comment-item" id="2">
+
+    <div class="comment-author">
+
+        <span class="author-avater">
+            <img class="avater_img" src="http://ptf.flyert.com/avatar/002/06/19/71_avatar_small.jpg" index="2" onerror="this.onerror=null;this.src='avatar-default.pdf'">
+                <img class="gender-mark" src="god.png" style="display:none;">
+        </span>
+        <div class="author-name">
+            <h4>
+                东吴大少爷
+
+                <img class="sm_icon" style="display:none;" src="vip.png">
+                <img class="vip_lv" style="display:none;" src="&lt;!-- COMMENT VIPICON IMG--&gt;">
+
+                <span style="display: none; color: rgb(0, 98, 230); border: 0.03125rem solid rgb(0, 98, 230);">楼主</span>
+
+            </h4>
+            <p><span>
+                    蓝钻会员</span><span>
+                    02-09</span></p>
+        </div>
+
+        <div class="fr">
+
+            <div class="sendFLower" style="<!--  SHOW FLOWER IMAGE  -->" index="2">
+
+                <img id="flowerImage2" src="flower.png">
+                <span class="flower_num" id="flowerImageCount2" style="color: rgb(149, 159, 169);">
+                     </span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="comment-content">
+
+        <img id="showBest2" class="comment-answer-img" style="display:none;" src="bestAnswer.png">
+
+
+
+        <div style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;" class="reply-phrase-bg">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  --></span><!-- COMMENT TO MESSAGE  --></span>
+        </div>
+
+        <div class="reply-phrase-bg" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    <!-- COMMENT REPLY AUThor  -->
+                </span>
+                <span class="reply-author comment_block">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+
+        <div class="reply-message" style="<!-- REPLY MESSAGE SHOW -->">
+            销这卡必去柜台，柜台必然可以处理
+        </div>
+
+        <div class="reply-phrase-bg textCenterClass" style="display: none; background-color: rgb(244, 245, 247); background-position: initial initial; background-repeat: initial initial;">
+            <span class="reply-phrase">
+                <span class="reply-author">
+                    评论已屏蔽
+                </span>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+      </div>
+
+      <div id="comment-none-empty" class="comment-none" style="display:none;">
+        <img src="empty_reply.png">
+        <p>
+          楼主还没有评论哦
+        </p>
+      </div>
+
+      <!--评论底部广告-->
+      <div class="comment_bottom_ad_place">
+        <div id="comment_bottom_adv" class="comment-ad" style="display:none;">
+          <!-- THREAD COMMENTBOTTOMADV CONTENT -->
+        </div>
+      </div>
+
+
+      <!-- 相关推荐 -->
+      <div class="recommend" style="<!-- THREAD RECOMMAND SHOW -->">
+        <div class="recommend-title">
+          也许您还会喜欢
+        </div>
+        <div class="panel" id="recommend_0"> <div class="panel-left"> <img src="image_default.png"> </div> <div class="panel-right"> <h3 class="panel-right-tit">易卡不是60000积分抵扣年费吗？怎么我被扣了480元</h3> <p class="panel-right-see">1209查看</p></div></div><div class="panel" id="recommend_1"> <div class="panel-left"> <img src="https://ptf.flyert.com/forum/2020/03/07/191951piorrjv4f5k37l98.jpg!k"> </div> <div class="panel-right"> <h3 class="panel-right-tit">中信没有资产的话，线上撸易卡还是线下悦卡？</h3> <p class="panel-right-see">296查看</p></div></div><div class="panel" id="recommend_2"> <div class="panel-left"> <img src="image_default.png"> </div> <div class="panel-right"> <h3 class="panel-right-tit">易卡2000的大白，现在何去何从</h3> <p class="panel-right-see">121查看</p></div></div>
+      </div>
+    </div>
+
+    <div class="ad-img" style="display:none;" id="v-advertisement">
+      <!-- ARTICLE AdVERTISEMENT LIST -->
+    </div>
+
+  </div>
+
+  <!-- 帖子页js -->
+  <script src="vote.js"></script>
+  <script src="detail.js"></script>
+  <script src="thread.js"></script>
+  <script src="night.js"></script>
+  <script src="resize.js"></script>
+  <!-- end -->
+  <!-- 好价js -->
+  <script src="swiper.min.js"></script>
+  <script>
+    $(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        observer: true,
+        observeParents: true,
+        on: {
+          init: function () {
+            var slides = this.slides;
+            if (slides.length == 1) {
+              $('.swiper-pagination').hide();
+              this.noSwiping =true;
+              $('.swiper-wrapper').addClass('swiper-no-swiping')
+            }
+          }
+        }
+      });
+    });
+  </script>
+  <!-- end -->
+  <!-- 通用js -->
+  <script src="https://ptf.flyert.com/template/zhikai_n5app/js/iphone_update.js" charset="UTF-8"></script>
+
+
+
+</body></html>
